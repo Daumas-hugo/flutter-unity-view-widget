@@ -39,7 +39,7 @@ public class Rotate : MonoBehaviour, IEventSystemHandler
     // This method is called from Flutter
     public void SetRotationSpeed(String message)
     {
-        float value = float.Parse(message);
+        float value = float.Parse(message , CultureInfo.InvariantCulture.NumberFormat);
         RotateAmount = new Vector3(value, value, value);
     }
 }
